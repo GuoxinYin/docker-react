@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true guoxiny/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-1"
+  app: "docker"
+  env: "Docker-env"
+  bucker_name: "elasticbeanstalk-us-west-1-723031619745"
+  bucker_path: "docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
