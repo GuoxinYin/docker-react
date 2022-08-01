@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          bye there
+          hello
         </p>
         <p className='App-intro'>
           i was changed by feature branch
